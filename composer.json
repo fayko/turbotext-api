@@ -6,26 +6,19 @@
     "homepage": "https://github.com/sb15/turbotext-api",
     "license": "MIT",
     "authors": [
-    {
-        "name": "Alexander Perov",
-        "email": "alex@sb6.ru"
-    },
-    "autoload": {
-        "psr-0": {
-
-        },
-        "classmap": [
-            
-        ],
+        {
+            "name": "Alexander Perov",
+            "email": "alex@sb6.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "sunra/php-simple-html-dom-parser": "v1.5.0",
+        "kriswallsmith/buzz": "v0.13"
+    },    
+    "autoload": {        
         "psr-4": {
             "Sb\\": "src"
         }
-    },
-    "require": {
-        "sunra/php-simple-html-dom-parser": "v1.5.0",
-        "kriswallsmith/buzz": "v0.13"
-    },
-    "require-dev": {
-        
     }
 }
