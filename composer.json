@@ -1,4 +1,15 @@
 {
+	"name": "sb15/turbotext-api",
+    "type": "library",
+    "description": "turbotext api",
+    "keywords": ["api"],
+    "homepage": "https://github.com/sb15/turbotext-api",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Alexander Perov",
+        "email": "alex@sb6.ru"
+    },
     "autoload": {
         "psr-0": {
 
