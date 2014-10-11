@@ -2,28 +2,13 @@
 
 namespace Sb\Turbotext;
 
-use Sunra\PhpSimple\HtmlDomParser;
-
 class Api
 {
     const END_POINT = 'http://www.turbotext.ru/api';
     const OPTION_API_KEY = 'api_key';
     const OPTION_METHOD = 'action';
 
-    private $browser = null;
     private $apiKey = null;
-
-    /**
-     * @return \Buzz\Browser
-     */
-    public function getBrowser()
-    {
-        if (!$this->browser) {
-            $cookieJar = new \Buzz\Util\CookieJar();
-            $this->browser = new \Buzz\Browser(new \Buzz\Client\FileGetContents($cookieJar));
-        }
-        return $this->browser;
-    }
 
     public function __construct($options = array())
     {
@@ -49,7 +34,7 @@ class Api
         $result = $this->call($options);
         return $result->orders;
     }
-    
+
     public function getOrder($orderId)
     {
         $result = $this->call(array(
@@ -59,9 +44,14 @@ class Api
         return $result;
     }
 
-    public function completeOrder($orderId)
+    public function completeOrder($orderId, $folderId)
     {
-        
+        $result = $this->call(array(
+            self::OPTION_METHOD => 'move_order',
+            'order_id' => $orderId,
+            'folder_id' => $folderId
+        ));
+        return $result;
     }
 
     public function call($options = array())
