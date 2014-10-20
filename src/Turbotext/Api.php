@@ -7,6 +7,7 @@ class Api
     const END_POINT = 'http://www.turbotext.ru/api';
     const OPTION_API_KEY = 'api_key';
     const OPTION_METHOD = 'action';
+    const IMAGE_URL = 'http://www.turbotext.ru/uploads/';
 
     private $apiKey = null;
 
