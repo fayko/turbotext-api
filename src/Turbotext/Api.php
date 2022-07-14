@@ -4,7 +4,7 @@ namespace Sb\Turbotext;
 
 class Api
 {
-    const END_POINT = 'http://www.turbotext.ru/api';
+    const END_POINT = 'https://www.turbotext.ru/api';
     const OPTION_API_KEY = 'api_key';
     const OPTION_METHOD = 'action';
     const IMAGE_URL = 'http://www.turbotext.ru/uploads/';
