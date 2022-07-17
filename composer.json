@@ -1,5 +1,6 @@
 {
 	"name": "fayko/turbotext-api",
+    "version": "1.0.0",
     "type": "library",
     "description": "turbotext api",
     "keywords": ["api"],
@@ -13,8 +14,8 @@
     ],
     "require": {
         "php": ">=5.3"
-    },    
-    "autoload": {        
+    },
+    "autoload": {
         "psr-4": {
             "Sb\\": "src"
         }
